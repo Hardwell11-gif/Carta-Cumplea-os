@@ -1,0 +1,89 @@
+@keyframes pulseText {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes colorShift {
+  0% { color: #d6293a; }
+  50% { color: #ff6f61; }
+  100% { color: #d6293a; }
+}
+
+body {
+  background-image: url('https://wallpapers.com/images/hd/pink-birthday-1332-x-850-background-84oju11wekyuvvt0.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: 'Lobster', cursive;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.p1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  text-align: center;
+  color: #d6293a;
+  font-weight: bold;
+  text-shadow: 0.5rem 0.5rem 1rem rgba(114, 7, 7, 0.7);
+  animation: pulseText 2s ease-in-out infinite, colorShift 4s infinite;
+}
+
+.p2 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  text-align: center;
+  color: #660022;
+  font-weight: 700;
+  animation: pulseText   2.5s ease-in-out infinite;
+}
+
+.sobre {
+  position: relative;
+  width: clamp(15rem, 50vw, 30rem);
+  aspect-ratio: 3 / 2;
+  background-color: #d6293a;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  perspective: 50rem;
+  cursor: pointer;
+}
+
+.tapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #950707;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transition: background-color 1s ease-in-out;
+  z-index: 3;
+}
+
+.sobre:hover .tapa {
+  background-color: white;
+}
+
+.sobre2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

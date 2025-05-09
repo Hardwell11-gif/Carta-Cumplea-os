@@ -1,0 +1,69 @@
+body {
+  background-image: url("https://wallpapers.com/images/hd/pink-birthday-1920-x-1440-background-u6of5po9gro1qbh2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: 'Lobster', cursive;
+}
+
+.carta {
+  background-color: #ff6699;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 50rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.4;
+  border-radius: 1rem;
+  gap: 1rem;
+  text-align: justify;
+}
+
+.p1{  
+  text-align: center;
+}
+
+.carta h1 {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+img {
+  width: clamp(6rem, 20vw, 12rem);
+  height: auto;
+  max-height: 12rem;
+  border-radius: 1rem;
+  align-self: center;
+}
+
+.firma {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+  .carta {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .firma {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
